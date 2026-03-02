@@ -72,9 +72,7 @@ def get_recommendations(profile: UserProfile):
     try:
         internships = get_all_internships()
         recommendations = engine.recommend(profile.dict(), internships, n=5)
-        
         profile_summary = engine.build_profile_summary(profile.dict())
-        
         return RecommendationResponse(
             recommendations=recommendations,
             total_available=len(internships),
@@ -97,30 +95,125 @@ def get_metadata():
     """Returns all dropdown options for the frontend form"""
     return {
         "streams": [
-            {"value": "engineering", "label": "Engineering", "label_hi": "इंजीनियरिंग", "icon": "⚙️"},
-            {"value": "arts",        "label": "Arts",        "label_hi": "कला",          "icon": "🎨"},
-            {"value": "commerce",    "label": "Commerce",    "label_hi": "वाणिज्य",       "icon": "💰"},
-            {"value": "science",     "label": "Science",     "label_hi": "विज्ञान",       "icon": "🔬"},
-            {"value": "medical",     "label": "Medical",     "label_hi": "चिकित्सा",      "icon": "🏥"},
-            {"value": "law",         "label": "Law",         "label_hi": "कानून",         "icon": "⚖️"},
-            {"value": "other",       "label": "Other",       "label_hi": "अन्य",          "icon": "📚"},
+            {
+                "value": "engineering",
+                "label": "Engineering",
+                "label_hi": "इंजीनियरिंग",
+                "label_as": "ইঞ্জিনিয়াৰিং",
+                "icon": "⚙️"
+            },
+            {
+                "value": "arts",
+                "label": "Arts",
+                "label_hi": "कला",
+                "label_as": "কলা",
+                "icon": "🎨"
+            },
+            {
+                "value": "commerce",
+                "label": "Commerce",
+                "label_hi": "वाणिज्य",
+                "label_as": "বাণিজ্য",
+                "icon": "💰"
+            },
+            {
+                "value": "science",
+                "label": "Science",
+                "label_hi": "विज्ञान",
+                "label_as": "বিজ্ঞান",
+                "icon": "🔬"
+            },
+            {
+                "value": "medical",
+                "label": "Medical",
+                "label_hi": "चिकित्सा",
+                "label_as": "চিকিৎসা",
+                "icon": "🏥"
+            },
+            {
+                "value": "law",
+                "label": "Law",
+                "label_hi": "कानून",
+                "label_as": "আইন",
+                "icon": "⚖️"
+            },
+            {
+                "value": "other",
+                "label": "Other",
+                "label_hi": "अन्य",
+                "label_as": "অন্যান্য",
+                "icon": "📚"
+            },
         ],
         "interests": [
-            {"value": "computers",    "label": "Computers & Tech",    "label_hi": "कंप्यूटर",    "icon": "💻"},
-            {"value": "outdoor",      "label": "Working Outdoors",    "label_hi": "बाहर काम",    "icon": "🌳"},
-            {"value": "people",       "label": "Helping People",      "label_hi": "लोगों की मदद","icon": "🤝"},
-            {"value": "manufacturing","label": "Making Things",        "label_hi": "निर्माण",     "icon": "🏭"},
-            {"value": "data",         "label": "Numbers & Data",      "label_hi": "डेटा",        "icon": "📊"},
-            {"value": "teaching",     "label": "Teaching & Training", "label_hi": "शिक्षण",      "icon": "📚"},
-            {"value": "healthcare",   "label": "Healthcare",          "label_hi": "स्वास्थ्य",   "icon": "❤️"},
-            {"value": "agriculture",  "label": "Agriculture",         "label_hi": "कृषि",        "icon": "🌾"},
+            {
+                "value": "computers",
+                "label": "Computers & Tech",
+                "label_hi": "कंप्यूटर",
+                "label_as": "কম্পিউটাৰ",
+                "icon": "💻"
+            },
+            {
+                "value": "outdoor",
+                "label": "Working Outdoors",
+                "label_hi": "बाहर काम",
+                "label_as": "বাহিৰত কাম",
+                "icon": "🌳"
+            },
+            {
+                "value": "people",
+                "label": "Helping People",
+                "label_hi": "लोगों की मदद",
+                "label_as": "মানুহক সহায়",
+                "icon": "🤝"
+            },
+            {
+                "value": "manufacturing",
+                "label": "Making Things",
+                "label_hi": "निर्माण",
+                "label_as": "নিৰ্মাণ",
+                "icon": "🏭"
+            },
+            {
+                "value": "data",
+                "label": "Numbers & Data",
+                "label_hi": "डेटा",
+                "label_as": "তথ্য",
+                "icon": "📊"
+            },
+            {
+                "value": "teaching",
+                "label": "Teaching & Training",
+                "label_hi": "शिक्षण",
+                "label_as": "শিক্ষণ",
+                "icon": "📚"
+            },
+            {
+                "value": "healthcare",
+                "label": "Healthcare",
+                "label_hi": "स्वास्थ्य",
+                "label_as": "স্বাস্থ্যসেৱা",
+                "icon": "❤️"
+            },
+            {
+                "value": "agriculture",
+                "label": "Agriculture",
+                "label_hi": "कृषि",
+                "label_as": "কৃষি",
+                "icon": "🌾"
+            },
+        ],
+        "languages": [
+            {"value": "en", "label": "English"},
+            {"value": "hi", "label": "हिंदी"},
+            {"value": "as", "label": "অসমীয়া"},
         ],
         "states": [
             "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh",
             "Goa","Gujarat","Haryana","Himachal Pradesh","Jharkhand","Karnataka",
             "Kerala","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram",
             "Nagaland","Odisha","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana",
-            "Tripura","Uttar Pradesh","Uttarakhand","West Bengal","Delhi","Jammu & Kashmir",
-            "Ladakh","Puducherry","Chandigarh"
+            "Tripura","Uttar Pradesh","Uttarakhand","West Bengal","Delhi",
+            "Jammu & Kashmir","Ladakh","Puducherry","Chandigarh"
         ]
     }

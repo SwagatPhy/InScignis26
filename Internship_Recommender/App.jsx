@@ -52,6 +52,12 @@ const T = {
     errorLogin: "Invalid email or password",
     errorExist: "Account already exists. Please sign in.",
     available: "internships found",
+    greeting: "Hi",
+    graduate: "Graduate / Final Year",
+    travelDesc: "Within your district or state",
+    travelDescYes: "Opportunities across India",
+    pleaseWait: "Please wait...",
+    reasonsMatched: "reasons matched",
   },
   hi: {
     appTitle: "पीएम इंटर्नशिप योजना",
@@ -103,29 +109,99 @@ const T = {
     errorLogin: "गलत ईमेल या पासवर्ड",
     errorExist: "खाता पहले से मौजूद है। साइन इन करें।",
     available: "इंटर्नशिप मिले",
+    greeting: "नमस्ते",
+    graduate: "स्नातक / अंतिम वर्ष",
+    travelDesc: "अपने जिले/राज्य के पास",
+    travelDescYes: "पूरे भारत में अवसर",
+    pleaseWait: "कृपया प्रतीक्षा करें...",
+    reasonsMatched: "कारण मिले",
+  },
+  as: {
+    appTitle: "পিএম ইন্টাৰ্নশ্বিপ আঁচনি",
+    appSubtitle: "আপোনাৰ বাবে ইন্টাৰ্নশ্বিপ বিচাৰক",
+    loginTitle: "পুনৰ স্বাগতম",
+    loginSubtitle: "আপোনাৰ একাউণ্টত চাইন ইন কৰক",
+    signupTitle: "একাউণ্ট বনাওক",
+    signupSubtitle: "হাজাৰ হাজাৰ শিক্ষাৰ্থীৰ সৈতে যোগ দিয়ক",
+    email: "ইমেইল ঠিকনা",
+    password: "পাছৱৰ্ড",
+    confirmPassword: "পাছৱৰ্ড নিশ্চিত কৰক",
+    loginBtn: "চাইন ইন কৰক →",
+    signupBtn: "একাউণ্ট বনাওক →",
+    noAccount: "একাউণ্ট নাই?",
+    hasAccount: "ইতিমধ্যে একাউণ্ট আছে?",
+    signupLink: "চাইন আপ কৰক",
+    loginLink: "চাইন ইন কৰক",
+    logout: "লগ আউট",
+    step1: "আপুনি কি পঢ়িছে?",
+    step2: "আপুনি কোন বছৰত আছে?",
+    step3: "আপুনি ক'ৰ পৰা?",
+    step4: "আপুনি কি ধৰণৰ কামত আগ্ৰহী?",
+    step5: "আপুনি কামৰ বাবে যাত্ৰা কৰিব পাৰিবনে?",
+    yes_travel: "হয়, যাত্ৰা কৰিব পাৰিম",
+    no_travel: "ঘৰৰ ওচৰত থাকিব বিচাৰো",
+    findBtn: "ইন্টাৰ্নশ্বিপ বিচাৰক →",
+    resultsTitle: "আপোনাৰ শ্ৰেষ্ঠ মিল",
+    monthlyStipend: "/মাহ",
+    months: "মাহ",
+    remote: "ঘৰৰ পৰা কাম",
+    whyThis: "কিয় এইটো?",
+    applyNow: "এতিয়াই আবেদন কৰক",
+    save: "সংৰক্ষণ",
+    startOver: "← নতুন সন্ধান",
+    selectState: "আপোনাৰ ৰাজ্য বাছক",
+    year: "বছৰ",
+    loading: "AI আপোনাৰ বাবে শ্ৰেষ্ঠ মিল বিচাৰি আছে...",
+    loadingStep1: "আপোনাৰ প্ৰফাইল বিশ্লেষণ কৰা হৈছে...",
+    loadingStep2: "ইন্টাৰ্নশ্বিপৰ তালিকা স্কেন কৰা হৈছে...",
+    loadingStep3: "প্ৰাসংগিকতা অনুযায়ী ৰেংকিং...",
+    noResults: "কোনো মিল পোৱা নগ'ল। আপোনাৰ পছন্দ সলনি কৰক।",
+    interests_prompt: "প্ৰযোজ্য সকলো বাছক",
+    namePlaceholder: "আপোনাৰ নাম লিখক",
+    emailPlaceholder: "আপুনি@ইমেইল.com",
+    passwordPlaceholder: "কমেও ৬ আখৰ",
+    errorEmail: "এটা বৈধ ইমেইল দিয়ক",
+    errorPassword: "পাছৱৰ্ড কমেও ৬ আখৰৰ হ'ব লাগিব",
+    errorMatch: "পাছৱৰ্ড মিলা নাই",
+    errorLogin: "ভুল ইমেইল বা পাছৱৰ্ড",
+    errorExist: "একাউণ্ট ইতিমধ্যে আছে। চাইন ইন কৰক।",
+    available: "ইন্টাৰ্নশ্বিপ পোৱা গ'ল",
+    greeting: "নমস্কাৰ",
+    graduate: "স্নাতক / অন্তিম বছৰ",
+    travelDesc: "আপোনাৰ জিলা/ৰাজ্যৰ ওচৰত",
+    travelDescYes: "সমগ্ৰ ভাৰতত সুযোগ",
+    pleaseWait: "অনুগ্ৰহ কৰি ৰাওক...",
+    reasonsMatched: "কাৰণ মিলিছে",
   },
 };
 
 const STREAMS = [
-  { value: "engineering", label: "Engineering", label_hi: "इंजीनियरिंग", icon: "⚙️" },
-  { value: "arts",        label: "Arts",        label_hi: "कला",          icon: "🎨" },
-  { value: "commerce",    label: "Commerce",    label_hi: "वाणिज्य",      icon: "💰" },
-  { value: "science",     label: "Science",     label_hi: "विज्ञान",      icon: "🔬" },
-  { value: "medical",     label: "Medical",     label_hi: "चिकित्सा",     icon: "🏥" },
-  { value: "law",         label: "Law",         label_hi: "कानून",        icon: "⚖️" },
-  { value: "other",       label: "Other",       label_hi: "अन्य",         icon: "📚" },
+  { value: "engineering", label: "Engineering", label_hi: "इंजीनियरिंग", label_as: "ইঞ্জিনিয়াৰিং", icon: "⚙️" },
+  { value: "arts",        label: "Arts",        label_hi: "कला",          label_as: "কলা",            icon: "🎨" },
+  { value: "commerce",    label: "Commerce",    label_hi: "वाणिज्य",      label_as: "বাণিজ্য",        icon: "💰" },
+  { value: "science",     label: "Science",     label_hi: "विज्ञान",      label_as: "বিজ্ঞান",        icon: "🔬" },
+  { value: "medical",     label: "Medical",     label_hi: "चिकित्सा",     label_as: "চিকিৎসা",        icon: "🏥" },
+  { value: "law",         label: "Law",         label_hi: "कानून",        label_as: "আইন",             icon: "⚖️" },
+  { value: "other",       label: "Other",       label_hi: "अन्य",         label_as: "অন্যান্য",        icon: "📚" },
 ];
 
 const INTERESTS = [
-  { value: "computers",     label: "Computers & Tech",    label_hi: "कंप्यूटर",    icon: "💻" },
-  { value: "outdoor",       label: "Working Outdoors",    label_hi: "बाहर काम",    icon: "🌳" },
-  { value: "people",        label: "Helping People",      label_hi: "लोगों की मदद",icon: "🤝" },
-  { value: "manufacturing", label: "Making Things",       label_hi: "निर्माण",     icon: "🏭" },
-  { value: "data",          label: "Numbers & Data",      label_hi: "डेटा",        icon: "📊" },
-  { value: "teaching",      label: "Teaching & Training", label_hi: "शिक्षण",      icon: "📚" },
-  { value: "healthcare",    label: "Healthcare",          label_hi: "स्वास्थ्य",   icon: "❤️" },
-  { value: "agriculture",   label: "Agriculture",         label_hi: "कृषि",        icon: "🌾" },
+  { value: "computers",     label: "Computers & Tech",    label_hi: "कंप्यूटर",    label_as: "কম্পিউটাৰ",    icon: "💻" },
+  { value: "outdoor",       label: "Working Outdoors",    label_hi: "बाहर काम",    label_as: "বাহিৰত কাম",   icon: "🌳" },
+  { value: "people",        label: "Helping People",      label_hi: "लोगों की मदद",label_as: "মানুহক সহায়",  icon: "🤝" },
+  { value: "manufacturing", label: "Making Things",       label_hi: "निर्माण",     label_as: "নিৰ্মাণ",      icon: "🏭" },
+  { value: "data",          label: "Numbers & Data",      label_hi: "डेटा",        label_as: "তথ্য",          icon: "📊" },
+  { value: "teaching",      label: "Teaching & Training", label_hi: "शिक्षण",      label_as: "শিক্ষণ",        icon: "📚" },
+  { value: "healthcare",    label: "Healthcare",          label_hi: "स्वास्थ्य",   label_as: "স্বাস্থ্যসেৱা", icon: "❤️" },
+  { value: "agriculture",   label: "Agriculture",         label_hi: "कृषि",        label_as: "কৃষি",          icon: "🌾" },
 ];
+
+// Helper to get the right label based on language
+const getLabel = (item, lang) => {
+  if (lang === "hi") return item.label_hi;
+  if (lang === "as") return item.label_as;
+  return item.label;
+};
 
 const STATES = [
   "Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chhattisgarh",
@@ -161,87 +237,42 @@ const SECTOR_COLORS = {
 const getSectorStyle = (sector) =>
   SECTOR_COLORS[sector?.toLowerCase()] || { bg: "#F8FAFC", accent: "#64748B", emoji: "💼" };
 
-// ─── Anthropic AI Call ─────────────────────────────────────────────────────
-async function fetchAIRecommendations(profile) {
-  const prompt = `You are an internship matching engine for India's PM Internship Scheme. Return exactly 5 highly relevant, personalized internship recommendations for this specific student.
-
-STUDENT PROFILE:
-- Stream/Education: ${profile.stream}
-- Year of Study: Year ${profile.year}
-- Home State: ${profile.state}
-- Interests: ${profile.interests.join(", ")}
-- Willing to travel: ${profile.willing_to_travel ? "Yes, open to other states" : "No, prefers home state or remote"}
-
-STRICT RULES:
-1. Companies must be REAL Indian companies with actual India operations (Tata, Infosys, ISRO, NTPC, Apollo Hospitals, Amul, ITC, SBI, Flipkart, ONGC, Wipro, HUL, Mahindra, DRDO, Reliance, Bajaj, HDFC, Maruti, Coal India, BHEL, L&T, Nestle India, Dabur, etc.)
-2. Each role must genuinely match the student's STREAM (${profile.stream}) AND INTERESTS (${profile.interests.join(", ")})
-3. Locations must favor ${profile.state}${profile.willing_to_travel ? " and nearby states" : " — only show this state or remote roles"}
-4. No more than 2 internships from the same sector
-5. Match score (60-95) must reflect actual relevance — not all 90+
-6. Stipend: ₹4000–₹15000/month
-7. Duration: 2–6 months
-8. why_this must be ONE specific sentence referencing THIS student's stream+interest+location combo
-
-Return ONLY a valid JSON array with no markdown fences or extra text:
-[
-  {
-    "internship_id": "PMI-AI-001",
-    "company": "Real Company Name",
-    "title": "Specific Role Title",
-    "location_city": "City",
-    "location_state": "Indian State",
-    "stipend": 6000,
-    "duration_months": 3,
-    "sector": "technology",
-    "is_remote": false,
-    "match_score": 87,
-    "match_reasons": ["Specific reason tied to profile", "Another specific reason"],
-    "why_this": "One sentence why this specific student should apply."
-  }
-]
-
-Valid sector values: technology, manufacturing, finance, agriculture, healthcare, ngo, automotive, media, government, pharma, energy, education, logistics, fmcg, infrastructure, environment, banking, retail, research`;
-
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
+// ─── Backend API Call ──────────────────────────────────────────────────────
+async function fetchRecommendations(profile) {
+  const res = await fetch("http://localhost:8000/recommend", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      model: "claude-sonnet-4-20250514",
-      max_tokens: 1000,
-      messages: [{ role: "user", content: prompt }],
-    }),
+    body: JSON.stringify(profile),
   });
-
-  const data = await response.json();
-  const text = data.content.map(b => b.text || "").join("");
-  const clean = text.replace(/```json|```/g, "").trim();
-  return JSON.parse(clean);
+  if (!res.ok) throw new Error(`API error: ${res.status}`);
+  const data = await res.json();
+  return data.recommendations;
 }
 
-// ─── Persistent Storage helpers ────────────────────────────────────────────
-async function getUsers() {
+// ─── Persistent Storage helpers (localStorage) ────────────────────────────
+function getUsers() {
   try {
-    const res = await window.storage.get("pmi_users");
-    return res ? JSON.parse(res.value) : {};
+    const data = localStorage.getItem("pmi_users");
+    return data ? JSON.parse(data) : {};
   } catch { return {}; }
 }
 
-async function saveUsers(users) {
-  try { await window.storage.set("pmi_users", JSON.stringify(users)); }
+function saveUsers(users) {
+  try { localStorage.setItem("pmi_users", JSON.stringify(users)); }
   catch (e) { console.error(e); }
 }
 
-async function getCurrentUser() {
+function getCurrentUser() {
   try {
-    const res = await window.storage.get("pmi_current_user");
-    return res ? JSON.parse(res.value) : null;
+    const data = localStorage.getItem("pmi_current_user");
+    return data ? JSON.parse(data) : null;
   } catch { return null; }
 }
 
-async function setCurrentUser(user) {
+function setCurrentUser(user) {
   try {
-    if (user) await window.storage.set("pmi_current_user", JSON.stringify(user));
-    else await window.storage.delete("pmi_current_user");
+    if (user) localStorage.setItem("pmi_current_user", JSON.stringify(user));
+    else localStorage.removeItem("pmi_current_user");
   } catch (e) { console.error(e); }
 }
 
@@ -251,6 +282,13 @@ const HEADER_STYLES = `
   @keyframes spin    { to { transform: rotate(360deg); } }
   * { box-sizing: border-box; }
 `;
+
+// Language switcher config
+const LANGS = [
+  { code: "en", display: "EN" },
+  { code: "hi", display: "हि" },
+  { code: "as", display: "অ" },
+];
 
 function AppHeader({ lang, setLang, user, onLogout }) {
   return (
@@ -264,13 +302,14 @@ function AppHeader({ lang, setLang, user, onLogout }) {
           ? <div style={{ fontSize: 12, color: "rgba(255,255,255,0.9)", fontWeight: 600 }}>👤 {user.name}</div>
           : <div />
         }
-        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-          {["en", "hi"].map(l => (
-            <button key={l} onClick={() => setLang(l)} style={{
-              padding: "3px 12px", borderRadius: 20, border: "none",
-              background: lang === l ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.25)",
-              color: lang === l ? "#EA580C" : "#fff", fontWeight: 700, fontSize: 12, cursor: "pointer",
-            }}>{l === "en" ? "EN" : "हि"}</button>
+        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+          {LANGS.map(l => (
+            <button key={l.code} onClick={() => setLang(l.code)} style={{
+              padding: "3px 10px", borderRadius: 20, border: "none",
+              background: lang === l.code ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.25)",
+              color: lang === l.code ? "#EA580C" : "#fff",
+              fontWeight: 700, fontSize: 12, cursor: "pointer",
+            }}>{l.display}</button>
           ))}
           {onLogout && (
             <button onClick={onLogout} style={{
@@ -380,7 +419,7 @@ function InternshipCard({ data, lang, index }) {
             padding: "2px 0", marginBottom: expanded ? 8 : 12,
             display: "flex", alignItems: "center", gap: 4,
           }}>
-            {expanded ? "▲" : "▼"} {data.match_reasons.length} reasons matched
+            {expanded ? "▲" : "▼"} {data.match_reasons.length} {t.reasonsMatched}
           </button>
         )}
 
@@ -428,27 +467,27 @@ function AuthScreen({ lang, setLang, onAuth }) {
 
   const update = (k, v) => { setForm(f => ({ ...f, [k]: v })); setError(""); };
 
-  const handleSubmit = async () => {
-    if (!form.email.includes("@"))                            { setError(t.errorEmail); return; }
-    if (form.password.length < 6)                            { setError(t.errorPassword); return; }
-    if (mode === "signup" && form.password !== form.confirm)  { setError(t.errorMatch); return; }
+  const handleSubmit = () => {
+    if (!form.email.includes("@"))                           { setError(t.errorEmail); return; }
+    if (form.password.length < 6)                           { setError(t.errorPassword); return; }
+    if (mode === "signup" && form.password !== form.confirm) { setError(t.errorMatch); return; }
     setBusy(true);
 
-    const users = await getUsers();
+    const users = getUsers();
 
     if (mode === "login") {
       const u = users[form.email];
       if (!u || u.password !== form.password) { setError(t.errorLogin); setBusy(false); return; }
       const obj = { email: form.email, name: u.name };
-      await setCurrentUser(obj);
+      setCurrentUser(obj);
       onAuth(obj);
     } else {
       if (users[form.email]) { setError(t.errorExist); setBusy(false); return; }
       const name = form.name.trim() || form.email.split("@")[0];
       users[form.email] = { password: form.password, name };
-      await saveUsers(users);
+      saveUsers(users);
       const obj = { email: form.email, name };
-      await setCurrentUser(obj);
+      setCurrentUser(obj);
       onAuth(obj);
     }
     setBusy(false);
@@ -459,6 +498,7 @@ function AuthScreen({ lang, setLang, onAuth }) {
     borderRadius: 12, border: "2px solid #E2E8F0",
     outline: "none", fontFamily: "inherit",
     background: "#FAFAFA", marginBottom: 12,
+    color: "#0F172A",
   };
 
   return (
@@ -511,7 +551,7 @@ function AuthScreen({ lang, setLang, onAuth }) {
             {busy
               ? <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}>
                   <span style={{ width: 16, height: 16, border: "2px solid rgba(255,255,255,0.4)", borderTop: "2px solid #fff", borderRadius: "50%", display: "inline-block", animation: "spin 0.8s linear infinite" }} />
-                  {lang === "hi" ? "कृपया प्रतीक्षा करें..." : "Please wait..."}
+                  {t.pleaseWait}
                 </span>
               : (mode === "login" ? t.loginBtn : t.signupBtn)
             }
@@ -574,14 +614,14 @@ function ResultsScreen({ results, lang, profile, user, onBack }) {
         </button>
         <div style={{ fontSize: 20, fontWeight: 900, color: "#fff" }}>{t.resultsTitle}</div>
         <div style={{ fontSize: 12, color: "rgba(255,255,255,0.85)", marginTop: 3 }}>
-          {lang === "hi" ? `नमस्ते ${user.name}` : `Hi ${user.name}`} · {results.length} {t.available}
+          {t.greeting} {user.name} · {results.length} {t.available}
         </div>
       </div>
 
       <div style={{ padding: "16px 20px 40px", maxWidth: 480, margin: "0 auto" }}>
         <div style={{ background: "#fff", borderRadius: 12, padding: "12px 16px", border: "1px solid #E2E8F0", fontSize: 13, color: "#475569", marginBottom: 16 }}>
           <span style={{ color: "#F97316", fontWeight: 700 }}>🤖 AI matched: </span>
-          Year {profile.year} {profile.stream} from {profile.state} · interested in {profile.interests.join(", ")}
+          Year {profile.year} {profile.stream} from {profile.state} · {profile.interests.join(", ")}
         </div>
 
         {results.length === 0
@@ -617,10 +657,10 @@ function ProfileForm({ lang, setLang, user, onLogout, onResults }) {
   const handleSubmit = async () => {
     setBusy(true);
     try {
-      const recs = await fetchAIRecommendations({ ...profile, name: user.name, language: lang });
+      const recs = await fetchRecommendations({ ...profile, name: user.name, language: lang });
       onResults(recs, profile);
     } catch (e) {
-      console.error("AI error:", e);
+      console.error("API error:", e);
       onResults([], profile);
     }
     setBusy(false);
@@ -652,7 +692,7 @@ function ProfileForm({ lang, setLang, user, onLogout, onResults }) {
                 }}>
                   <div style={{ fontSize: 28, marginBottom: 6 }}>{s.icon}</div>
                   <div style={{ fontSize: 13, fontWeight: 700, color: profile.stream === s.value ? "#EA580C" : "#334155" }}>
-                    {lang === "hi" ? s.label_hi : s.label}
+                    {getLabel(s, lang)}
                   </div>
                 </button>
               ))}
@@ -681,7 +721,7 @@ function ProfileForm({ lang, setLang, user, onLogout, onResults }) {
                     fontSize: 15, fontWeight: 800, flexShrink: 0,
                   }}>{y}</div>
                   <span style={{ fontSize: 15, fontWeight: 600, color: profile.year === y ? "#EA580C" : "#334155" }}>
-                    {y === 5 ? (lang === "hi" ? "स्नातक / अंतिम वर्ष" : "Graduate / Final Year") : `${t.year} ${y}`}
+                    {y === 5 ? t.graduate : `${t.year} ${y}`}
                   </span>
                 </button>
               ))}
@@ -728,7 +768,7 @@ function ProfileForm({ lang, setLang, user, onLogout, onResults }) {
                     {sel && <div style={{ position: "absolute", top: 6, right: 8, fontSize: 11, fontWeight: 800, color: "#F97316" }}>✓</div>}
                     <div style={{ fontSize: 26, marginBottom: 5 }}>{i.icon}</div>
                     <div style={{ fontSize: 12, fontWeight: 700, color: sel ? "#EA580C" : "#475569", lineHeight: 1.3 }}>
-                      {lang === "hi" ? i.label_hi : i.label}
+                      {getLabel(i, lang)}
                     </div>
                   </button>
                 );
@@ -743,8 +783,8 @@ function ProfileForm({ lang, setLang, user, onLogout, onResults }) {
             <div style={{ fontSize: 20, fontWeight: 800, color: "#0F172A", marginBottom: 20 }}>{t.step5}</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
               {[
-                { val: false, label: t.no_travel, icon: "🏡", desc: lang === "hi" ? "अपने जिले/राज्य के पास" : "Within your district or state" },
-                { val: true,  label: t.yes_travel, icon: "✈️", desc: lang === "hi" ? "पूरे भारत में अवसर" : "Opportunities across India" },
+                { val: false, label: t.no_travel,  icon: "🏡", desc: t.travelDesc },
+                { val: true,  label: t.yes_travel, icon: "✈️", desc: t.travelDescYes },
               ].map(opt => (
                 <button key={String(opt.val)} onClick={() => setProfile(p => ({ ...p, willing_to_travel: opt.val }))} style={{
                   padding: "18px 20px", borderRadius: 14,
@@ -805,11 +845,13 @@ export default function App() {
   const [lastProfile, setLastProfile] = useState(null);
 
   useEffect(() => {
-    getCurrentUser().then(u => { if (u) setUser(u); setChecked(true); });
+    const u = getCurrentUser();
+    if (u) setUser(u);
+    setChecked(true);
   }, []);
 
-  const handleLogout = async () => {
-    await setCurrentUser(null);
+  const handleLogout = () => {
+    setCurrentUser(null);
     setUser(null);
     setResults(null);
   };
